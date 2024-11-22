@@ -225,7 +225,7 @@ router.get("/messages/:receiverId", authenticateUser, async (req, res) => {
 });
 
 app.use("/api", router);
-
+//After Adding Socket.
 // Socket.IO Real-Time Chat
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
